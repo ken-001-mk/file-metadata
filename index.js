@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
 });
 
 
-app.get('/api/fileanalyse', upload.single('upfile'), (req, res) => {
+app.post('/api/fileanalyse', upload.single('upfile'), (req, res) => {
   res.json({
     name: req.file.originalname,
     type: req.file.mimetype,
